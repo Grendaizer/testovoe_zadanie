@@ -7,15 +7,12 @@ from source.settings import URL2, PATH, EMAIL, PASSWORD
 
 class Test_Login_Form:
 
-    def test_emai_login(self,webdriver_driver):
-
-        try:
-            webdriver_driver.get(URL2)
-            login = Login_Home_Page(webdriver_driver)
-            login.send_email(EMAIL)
-            login.send_password(PASSWORD)
-            login.click_button()
-            assert "The field cannot be empty" not in webdriver_driver.page_source
-            assert "Incorrect authentication credentials." not in webdriver_driver.page_source
-        finally:
-                print("\ntest finish")
+    def test_emai_login(self, webdriver_driver):
+        webdriver_driver.get(URL2)
+        login = Login_Home_Page(webdriver_driver)
+        login.send_email(EMAIL)
+        login.send_password(PASSWORD)
+        login.click_button()
+        assert "The field cannot be empty" not in webdriver_driver.page_source
+        assert "Incorrect authentication credentials." not in webdriver_driver.page_source
+        print("\ntest finish")
