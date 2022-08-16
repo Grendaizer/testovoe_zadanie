@@ -1,0 +1,7 @@
+URL = "https://eos.com/crop-monitoring/"
+URL2 = "https://crop-monitoring.eos.com/login/auth"
+PATH = "/usr/lib/chromium-browser/chromedriver"
+NAME = "Tom"
+SECOND_NAME = "Smith"
+EMAIL = "test+1@test.com"
+PASSWORD = "qwerty1234"
