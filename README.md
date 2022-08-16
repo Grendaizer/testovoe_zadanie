@@ -3,4 +3,4 @@ sudo apt-get install chromium-chromedriver
 
 sudo pip install -r requirements.txt
 
-запускай
+run
