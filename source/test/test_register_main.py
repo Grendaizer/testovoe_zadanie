@@ -10,22 +10,16 @@ class Test_Register_Form:
 
     def test_emai_register(self):
         self.driver = webdriver.Chrome(PATH)
+        self.driver.implicitly_wait(time_to_wait=10)
         try:
             self.driver.get(URL)
-            time.sleep(1)
             register = Register_Home_Page(self.driver)
             register.send_name(NAME)
-            time.sleep(1)
             register.send_last_name(SECOND_NAME)
-            time.sleep(1)
             register.send_email(EMAIL)
-            time.sleep(1)
             register.send_password(PASSWORD)
-            time.sleep(1)
             register.click_checkbox()
-            time.sleep(1)
             register.click_button()
-            time.sleep(1)
             assert "The field cannot be empty" not in self.driver.page_source
             assert "Invalid email" not in self.driver.page_source
         finally:

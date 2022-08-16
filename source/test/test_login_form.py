@@ -9,17 +9,13 @@ class Test_Login_Form:
 
     def test_emai_login(self):
         self.driver = webdriver.Chrome(PATH)
+        self.driver.implicitly_wait(time_to_wait=10)
         try:
             self.driver.get(URL2)
-            time.sleep(2)
             login = Login_Home_Page(self.driver)
-            time.sleep(1)
             login.send_email(EMAIL)
-            time.sleep(1)
             login.send_password(PASSWORD)
-            time.sleep(1)
             login.click_button()
-            time.sleep(1)
             assert "The field cannot be empty" not in self.driver.page_source
         finally:
             self.driver.quit()
