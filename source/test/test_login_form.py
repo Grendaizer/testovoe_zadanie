@@ -18,4 +18,4 @@ class Test_Login_Form:
             assert "The field cannot be empty" not in webdriver_driver.page_source
             assert "Incorrect authentication credentials." not in webdriver_driver.page_source
         finally:
-                print("test finish")
+                print("\ntest finish")
