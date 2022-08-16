@@ -20,5 +20,6 @@ class Test_Login_Form:
             time.sleep(1)
             login.click_button()
             time.sleep(1)
+            assert "The field cannot be empty" not in self.driver.page_source
         finally:
             self.driver.quit()

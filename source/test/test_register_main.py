@@ -26,5 +26,7 @@ class Test_Register_Form:
             time.sleep(1)
             register.click_button()
             time.sleep(1)
+            assert "The field cannot be empty" not in self.driver.page_source
+            assert "Invalid email" not in self.driver.page_source
         finally:
             self.driver.quit()
