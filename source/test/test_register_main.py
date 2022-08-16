@@ -20,6 +20,7 @@ class Test_Register_Form:
                 register.click_button()
                 assert "The field cannot be empty" not in webdriver_driver.page_source
                 assert "Invalid email" not in webdriver_driver.page_source
+                assert "Please, verify your email address" not in webdriver_driver.page_source
         finally:
                 print("\ntest finish")
 
