@@ -7,8 +7,7 @@ class Register_Home_Page:
     __EMAIL_ID = "mat-input-2"
     __PASSWORD_ID = "mat-input-3"
     __CHECKBOX = "mat-checkbox-inner-container"
-    __SIGN_UP_BUTTON = "/html/body/cm-root/ui-login-page/div[2]/div[3]/ui-registration-form/div[2]/div/div/form/div[5]/div"
-    __SIGN_IN_BUTTOM = "/html/body/cm-root/ui-login-page/div[2]/div[3]/ui-auth-form/div[2]/div/div/form/div/button/div"
+    __SIGN_UP_BUTTON = "/html/body/cm-root/ui-login-page/div[2]/div[3]/ui-registration-form/div[2]/div/div/form/div[5]/div/button"
 
     def __init__(self, driver):
         self.driver = driver
